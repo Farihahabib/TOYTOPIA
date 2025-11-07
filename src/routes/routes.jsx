@@ -8,12 +8,17 @@ import Logout from "../components/Logout";
 import TermsConditions from "../components/TermsConditions";
 import Contact from "../components/Contact";
 import PrivacyPolicy from "../components/PrivacyPolicy";
+import Register from "../components/Register";
+import { AuthProvider } from "../Context/AuthContext";
 
 
 export const router = createBrowserRouter([
     {
         path : "/",
-        element:<MainLayouts />, 
+        element:(
+        <AuthProvider>
+        <MainLayouts />
+        </AuthProvider>), 
         children:[
             {
                 index:true,
@@ -34,6 +39,10 @@ export const router = createBrowserRouter([
             {
                 path:"/logout",
                 element:<Logout />
+            },
+            {
+                path:"/Register",
+                element:<Register />
             },
             {
                 path:"/contact",

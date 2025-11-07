@@ -2,11 +2,32 @@ import React from 'react';
 import logo from "../assets/ToyTopia-logo.png";
 import MyContainer from './MyContainer';
 import MyLink from './MyLink';
-import { NavLink } from 'react-router';
+import { NavLink} from 'react-router';
+import { useAuth } from '../Context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const Navbar = () => {
+    const { user, logout, setUser, loading, setLoading } =
+  useAuth();
+  const navigate = useNavigate(); 
+    const handlelogout = () => {
+        setLoading(true);
+         navigate("/login");
+     logout().then(() => {
+    
+         toast.success("Logout successful");
+         setUser(null);
+    
+       })
+       .catch((e) => {
+         toast.error(e.message);
+       }).finally(() => {
+        setLoading(false);
+      });;
+   };
+ 
     return (
        <>
-
         <div className="bg-[#06a096] py-2 border-b container border-b-slate-300 ">
             <MyContainer className="flex items-center justify-between  ">
      <figure className='flex items-center gap-1.5'>
@@ -21,9 +42,21 @@ const Navbar = () => {
             <MyLink to={"/profile"}>Profile</MyLink>
            </li>
          </ul>
+         { !user ?
 <NavLink to={"/login"}>
 <button className="bg-teal-400 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">Login</button>
-</NavLink>
+</NavLink> : <div className='flex gap-2'>
+    <div className='relative group overflow-visible'>
+    <img src={user?.photoURL || "https://via.placeholder.com/88"}
+   className="h-10 w-10 rounded-full mx-auto"
+   alt="user profile" />
+            <span className='absolute bottom-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm text-white rounded-md opacity-0 group-hover:opacity-100  transition-all font-bold duration-300 '> 
+            {user?.displayName || "Anonymous User"}
+            </span>  
+              </div>
+    <button onClick={handlelogout} 
+     className='p-1 bg-teal-400 text-white  rounded-md font-semibold cursor-pointer'>{loading ? "Logging out..." : "Logout"}</button>
+    </div>}
 </MyContainer>
          
     </div>
