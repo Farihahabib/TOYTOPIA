@@ -7,7 +7,7 @@ import { useAuth } from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 const Navbar = () => {
-    const { user, logout, setUser, loading, setLoading } =
+    const { user, logout,  loading, setLoading } =
   useAuth();
   const navigate = useNavigate(); 
     const handlelogout = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
      logout().then(() => {
     
          toast.success("Logout successful");
-         setUser(null);
+        setLoading(false);
     
        })
        .catch((e) => {
@@ -47,7 +47,7 @@ const Navbar = () => {
 <button className="bg-teal-400 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">Login</button>
 </NavLink> : <div className='flex gap-2'>
     <div className='relative group overflow-visible'>
-    <img src={user?.photoURL || "https://via.placeholder.com/88"}
+    <img src={user?.photoURL|| "https://via.placeholder.com/88"}
    className="h-10 w-10 rounded-full mx-auto"
    alt="user profile" />
             <span className='absolute bottom-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm text-white rounded-md opacity-0 group-hover:opacity-100  transition-all font-bold duration-300 '> 

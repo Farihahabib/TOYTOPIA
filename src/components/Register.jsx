@@ -9,17 +9,19 @@ import { IoEyeOff } from 'react-icons/io5';
 import { getAuth, updateProfile } from 'firebase/auth';
 import { useAuth } from '../Context/AuthContext';
 
+
 const Register = () => {
      const navigate = useNavigate();
+     const {setUser} = useAuth();
     const [show,setshow] = useState(false);
-    const {setUser} = useAuth();
+   
     const handleregister = (e)=>{
 e.preventDefault();
-const name = e.target.name.value;
-const email = e.target.email.value;
-const password = e.target.password.value;
-const picfile = e.target.pic.files[0];
-console.log("registered",{name,email})
+const displayName = e.target.displayName?.value;
+const email = e.target.email?.value;
+const password = e.target.password?.value;
+const photoURL = e.target.photoURL?.value || "https://via.placeholder.com/88";
+console.log("registered",{displayName,email})
     
 const re = /^(?=.{6,64}$)(?=.*[a-z])(?=.*[A-Z]).*$/;
 if (!re.test(password)){
@@ -28,24 +30,22 @@ if (!re.test(password)){
 }
 
     const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password).then(async(res)=>{
-    console.log(res);
- 
-     const photoURL = picfile ? URL.createObjectURL(picfile) : "https://via.placeholder.com/88";
-  await updateProfile(auth.currentUser, {
-        displayName: name,
-        photoURL: photoURL
-      });
-          setUser({
-        ...auth.currentUser,
-        displayName: name,
-        photoURL: photoURL,
-    })
-   
+createUserWithEmailAndPassword(auth, email, password).then((res)=>{
   
-       toast.success("Registration Successful")
-           navigate("/");
-}).catch((e)=>{
+   updateProfile(res.user,{
+    displayName,
+    photoURL,
+   })
+    setUser({
+        ...auth.currentUser,
+        displayName: displayName,
+        photoURL: photoURL,
+      });
+   
+       
+    toast.success("Registration Successful")
+           navigate("/");})
+.catch((e)=>{
 if(e.code === "auth/email-already-in-use")
     {
         toast.error("Email already in use. Please use a different email.");
@@ -65,7 +65,8 @@ if(e.code === "auth/email-already-in-use")
       ;
    
 
-    }
+    
+}
     return (
         <>
             <title>ToyTopia - Registration</title>
@@ -78,9 +79,9 @@ if(e.code === "auth/email-already-in-use")
   <h1 className="fieldset-legend pt-5 flex justify-center items-center text-xl text-white font-bold">Register Now</h1>
 
   <label className="label font-bold ">Name</label>
-  <input type="text" name='name' className="input bg-teal-50 h-7" placeholder="Your Name" />
+  <input type="text" name='displayName' className="input bg-teal-50 h-7" placeholder="Your Name" />
   <label className="label font-bold ">Photo</label>
-  <input type="file"  name='pic'  className="input bg-teal-50 h-7" placeholder="choose a photo" />
+  <input type="text"  name='photoURL'  className="input bg-teal-50 h-7" placeholder="choose a photo" />
 
   <label className="label font-bold ">Email</label>
   <input type="email"  name='email'  className="input bg-teal-50 h-7 text-gray-400" placeholder="Email" />
