@@ -1,30 +1,30 @@
-import React from 'react';
+import React, {  useContext } from 'react';
 import logo from "../assets/ToyTopia-logo.png";
 import MyContainer from './MyContainer';
 import MyLink from './MyLink';
 import { NavLink} from 'react-router';
-import { useAuth } from '../Context/AuthContext';
+import { DotLoader} from "react-spinners";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../Context/AuthContext';
 const Navbar = () => {
-    const { user, logout,  loading, setLoading } =
-  useAuth();
+    const { user,setUser, logout, loading ,setLoading } =
+  useContext(AuthContext);
+  console.log(user);
   const navigate = useNavigate(); 
-    const handlelogout = () => {
-        setLoading(true);
-         navigate("/login");
-     logout().then(() => {
-    
-         toast.success("Logout successful");
+ const handleSignout = () => {
+    logout()
+           .then(() => {
+        toast.success("logout successful");
+navigate("/login")
+        setUser(null);
         setLoading(false);
-    
-       })
-       .catch((e) => {
-         toast.error(e.message);
-       }).finally(() => {
-        setLoading(false);
-      });;
-   };
+      })
+      .catch((e) => {
+        toast.error(e.message);
+      });
+  };
+console.log(loading);
  
     return (
        <>
@@ -38,14 +38,14 @@ const Navbar = () => {
            <li>
             <MyLink to={"/"}>Home</MyLink>
           </li>
-          <li>
+        {user &&  (<li>
             <MyLink to={"/profile"}>Profile</MyLink>
-           </li>
+           </li>)}
          </ul>
-         { !user ?
-<NavLink to={"/login"}>
-<button className="bg-teal-400 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">Login</button>
-</NavLink> : <div className='flex gap-2'>
+         {loading ?
+         (<DotLoader  />) :
+         user ?
+        <div className='flex gap-2'>
     <div className='relative group overflow-visible'>
     <img src={user?.photoURL|| "https://via.placeholder.com/88"}
    className="h-10 w-10 rounded-full mx-auto"
@@ -54,9 +54,16 @@ const Navbar = () => {
             {user?.displayName || "Anonymous User"}
             </span>  
               </div>
-    <button onClick={handlelogout} 
-     className='p-1 bg-teal-400 text-white  rounded-md font-semibold cursor-pointer'>{loading ? "Logging out..." : "Logout"}</button>
-    </div>}
+    <button onClick={handleSignout} 
+     className='p-1 bg-teal-400 text-white  rounded-md font-semibold cursor-pointer'>{loading ? "Logging out..." : "Logout" }</button>
+    </div>
+             
+         :
+<NavLink to={"/login"}>
+<button className="bg-teal-400 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">Login</button>
+</NavLink>
+}
+
 </MyContainer>
          
     </div>

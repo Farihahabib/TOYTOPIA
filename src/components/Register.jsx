@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, {  useContext, useState } from 'react';
 import MyContainer from './MyContainer';
 import { FaEye, FaGoogle } from 'react-icons/fa';
 import { NavLink, useNavigate } from 'react-router';
-import { createUserWithEmailAndPassword } from 'firebase/auth/cordova';
+
 
 import { toast } from 'react-toastify';
 import { IoEyeOff } from 'react-icons/io5';
-import { getAuth, updateProfile } from 'firebase/auth';
-import { useAuth } from '../Context/AuthContext';
+
+import { AuthContext, } from '../Context/AuthContext';
 
 
 const Register = () => {
      const navigate = useNavigate();
-     const {setUser} = useAuth();
+    const{createuserWithEmailAndPasswordFunc, updateprofileFunc,user,setUser,signinwithgooglefunc,setLoading} = useContext(AuthContext)
     const [show,setshow] = useState(false);
-   
+   console.log("register user", user)
     const handleregister = (e)=>{
 e.preventDefault();
 const displayName = e.target.displayName?.value;
@@ -29,22 +29,16 @@ if (!re.test(password)){
     return
 }
 
-    const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password).then((res)=>{
-  
-   updateProfile(res.user,{
-    displayName,
-    photoURL,
-   })
-    setUser({
-        ...auth.currentUser,
-        displayName: displayName,
-        photoURL: photoURL,
-      });
-   
-       
-    toast.success("Registration Successful")
-           navigate("/");})
+createuserWithEmailAndPasswordFunc(email,password).then((res)=>{
+    console.log(res)
+    setUser(res.user);
+updateprofileFunc( displayName, photoURL)
+.then(()=>{
+    setLoading(false);
+          toast.success("Registration Successful")
+           navigate("/")});
+})
+         
 .catch((e)=>{
 if(e.code === "auth/email-already-in-use")
     {
@@ -61,12 +55,22 @@ if(e.code === "auth/email-already-in-use")
     else{
         toast.error(e.message);
     }
+    setLoading(false)
 })
-      ;
-   
-
+    }
+    const handlegoogleregister = (e)=>{
+signinwithgooglefunc().then((res)=>{
+console.log(res);
+console.log(e)
+setUser(res.user);
+navigate("/");
+toast.success(" Successfully Registered with Google")
+})
+.catch((e)=>{
+    toast.error(e.message);
+})
+    }
     
-}
     return (
         <>
             <title>ToyTopia - Registration</title>
@@ -92,8 +96,8 @@ if(e.code === "auth/email-already-in-use")
 </div>
   <button className="btn btn-neutral bg-teal-800 mt-4">Submit</button>
 
-  <button className="btn btn-neutral bg-teal-600 border-none mt-4"><FaGoogle />Continue With Google</button>
-  <p className='text-white font-bold text-center py-3'>Already have an account? <NavLink to={'/login'}> <button className='border-b'>Login</button></NavLink></p>
+  <button onClick={handlegoogleregister} className="btn btn-neutral bg-teal-600 border-none mt-4"><FaGoogle />Continue With Google</button>
+  <p className='text-white font-bold text-center py-3'>Already have an account? <NavLink to={'/login'}> <button className='border-b'>Login</button></NavLink> </p>
  
 </form>
 

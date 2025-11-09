@@ -9,16 +9,16 @@ import TermsConditions from "../components/TermsConditions";
 import Contact from "../components/Contact";
 import PrivacyPolicy from "../components/PrivacyPolicy";
 import Register from "../components/Register";
-import { AuthProvider } from "../Context/AuthContext";
+
+import Fpassword from "../components/Fpassword";
+import Privateroute from "../PrivateRoute/Privateroute";
 
 
 export const router = createBrowserRouter([
     {
         path : "/",
-        element:(
-        <AuthProvider>
-        <MainLayouts />
-        </AuthProvider>), 
+        element:
+        <MainLayouts />,
         children:[
             {
                 index:true,
@@ -30,7 +30,10 @@ export const router = createBrowserRouter([
             },
             {
                 path:"/profile",
-                element:<Profile />
+                element: ( <Privateroute>
+                    <Profile />
+                    </Privateroute>
+                )
             },
             {
                 path:"/login",
@@ -56,6 +59,11 @@ export const router = createBrowserRouter([
                 path:"/Terms_Conditions",
                 element:<TermsConditions />
             },
+            {
+                path : "/Fpassword",
+                element: <Fpassword />
+            },
+         
         ]
     }
 ])
