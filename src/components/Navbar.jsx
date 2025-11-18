@@ -28,8 +28,8 @@ console.log(loading);
  
     return (
        <>
-        <div className="bg-[#06a096] py-2 border-b container border-b-slate-300 ">
-            <MyContainer className="flex items-center justify-between  ">
+        <MyContainer className="bg-[#06a096] py-3 border-b  border-b-slate-300 ">
+    <div className='flex justify-between'>
      <figure className='flex items-center gap-1.5'>
               <img src={logo} className="w-[45px] rounded-4xl" />
               <h3 className='font-bold  text-white text-xl'>ToyTopia</h3>
@@ -60,13 +60,12 @@ console.log(loading);
              
          :
 <NavLink to={"/login"}>
-<button className="bg-teal-400 text-white px-4 py-2 rounded-md font-semibold cursor-pointer">Login</button>
+<button className="bg-teal-400 text-white px-4 ml-4 py-2 rounded-md font-semibold cursor-pointer">Login</button>
 </NavLink>
 }
-
-</MyContainer>
+</div>
          
-    </div>
+    </MyContainer>
   
        </>
     );

@@ -1,9 +1,11 @@
 import React from 'react';
 import MyLink from './MyLink';
+import MyContainer from './MyContainer';
 
 const Footer = () => {
     return (
        <>
+       <MyContainer>
        <footer className="footer footer-horizontal footer-center bg-teal-500 text-base-content rounded p-10">
   <nav className="grid grid-flow-col gap-4">
       <MyLink to={"/about-us"}>About Us</MyLink>
@@ -52,7 +54,7 @@ const Footer = () => {
     <p>Copyright © {new Date().getFullYear()} - All right reserved by ToyTopia</p>
   </aside>
 </footer>
-   
+   </MyContainer>
        </>
     );
 };

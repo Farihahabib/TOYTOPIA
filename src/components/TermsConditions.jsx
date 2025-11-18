@@ -1,43 +1,105 @@
-import React from 'react';
+import React from "react";
 
-const TermsConditions = () => {
-    return (
-        <div>
-                <title>ToyTopia - Terms & Conditions</title>
-      <h1 className='font-bold text-xl'>ToyTopia – Terms & Conditions</h1>
-      <p className='font-bold text-md'>Effective Date: 20 june,2024</p>
-        <p>Welcome to ToyTopia! By using our toy storage services, you agree to the following terms and conditions:</p>
-<h1 className='font-bold text-md'>1. Service Agreement</h1>
-<p>ToyTopia provides storage services for your toys at our facility.</p>
-<p>You are responsible for providing accurate information about your toys.</p>
-<p>We reserve the right to refuse service if toys are unsafe, damaged, or illegal.</p>
-<h1 className='font-bold text-md'>2. Storage & Safety</h1>
-<p>We will store your toys in a clean and secure environment.</p>
-<p>We take care to store toys safely. However, ToyTopia is not responsible for damage caused by accidents, natural disasters, or misuse.</p>
-<p>You must label toys clearly and follow our storage guidelines</p>
-<h1 className='font-bold text-md'>3. Payment Terms</h1>
-<p>Storage fees must be paid on time.</p>
-<p>Late payments may result in temporary suspension or removal of your toys from storage.</p>
-<h1 className='font-bold text-md'>4. Access & Pickup</h1>
-<p>Toys can be picked up according to your scheduled time.</p>
-<p>Please provide advance notice for any changes in pickup or delivery.</p>
-<h1 className='font-bold text-md'>5. Personal Belongings & Liability
-</h1>
-<p>ToyTopia is not responsible for personal items stored with toys unless explicitly agreed upon.</p>
-<p>Insurance for toys is your responsibility unless otherwise arranged.</p>
-<h1 className='font-bold text-md'>6. Cancellations & Refunds</h1>
-<p>Cancellations must be communicated in advance.</p>
-<p>Refunds are subject to our refund policy and may depend on the storage period used.</p>
-<h1 className='font-bold text-md'>7. Changes to Terms</h1>
-<p>ToyTopia may update these terms and conditions. Changes will be communicated through our website or direct contact.</p>
-<p>ToyTopia may update these terms from time to time.Updates will be posted on our website, and continued use of services constitutes acceptance</p>
-<p>If you have any questions, reach us at:</p>
-<h1 className="text-xl font-bold">ToyTopia</h1>
-khulna, Bangladesh<br></br>
-email: toytopia1@gmail.com<br></br>
-phone: +880123456789<br></br>
-        </div>
-    );
+const Terms = () => {
+  return (
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold text-center text-teal-600 mb-10">
+        Terms & Conditions – ToyTopia
+      </h1>
+
+      <p className="text-gray-700 mb-6">
+        Welcome to <strong>ToyTopia</strong>. By accessing or using our website,
+        you agree to follow the Terms & Conditions below. Please read them
+        carefully before using our services.
+      </p>
+
+      {/* Section 1 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        1. Acceptance of Terms
+      </h2>
+      <p className="text-gray-700 mb-6">
+        By using our website, products, or services, you acknowledge that you
+        have read, understood, and agreed to these Terms & Conditions. If you do
+        not agree, please discontinue using ToyTopia.
+      </p>
+
+      {/* Section 2 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        2. Use of Our Website
+      </h2>
+      <p className="text-gray-700 mb-6">
+        You may browse, purchase toys, and access information on our website
+        only for lawful purposes. You agree not to misuse the website or engage
+        in any unauthorized activity that could harm our platform or other
+        users.
+      </p>
+
+      {/* Section 3 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        3. Product Information
+      </h2>
+      <p className="text-gray-700 mb-6">
+        We strive to ensure that all toy details, prices, and availability are
+        accurate. However, errors may occur, and we reserve the right to update,
+        correct, or modify product information without prior notice.
+      </p>
+
+      {/* Section 4 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        4. Orders & Payments
+      </h2>
+      <p className="text-gray-700 mb-6">
+        All orders placed with ToyTopia must be paid in full before shipment.
+        We hold the right to cancel any order in case of pricing errors, stock
+        issues, or suspected fraudulent activity.
+      </p>
+
+      {/* Section 5 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        5. Returns & Refunds
+      </h2>
+      <p className="text-gray-700 mb-6">
+        Customers may request returns or refunds within 7 days of purchase,
+        provided the toy is unused, undamaged, and in original packaging.
+        Digital items are non-refundable.
+      </p>
+
+      {/* Section 6 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        6. Privacy Policy
+      </h2>
+      <p className="text-gray-700 mb-6">
+        We respect your privacy and protect your personal information following
+        our Privacy Policy. By using our services, you consent to our data
+        practices.
+      </p>
+
+      {/* Section 7 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        7. Limitation of Liability
+      </h2>
+      <p className="text-gray-700 mb-6">
+        ToyTopia will not be held responsible for any damages, losses, or
+        injuries arising from improper toy use, website downtime, or purchase
+        issues beyond our control.
+      </p>
+
+      {/* Section 8 */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+        8. Changes to Terms
+      </h2>
+      <p className="text-gray-700 mb-6">
+        We may update these Terms & Conditions at any time. Continued use of our
+        website means you accept any changes made.
+      </p>
+
+      {/* Footer */}
+      <p className="text-gray-700 mt-10">
+        If you have any questions about these Terms & Conditions, please contact
+        us at: support@toytopia.com
+      </p>
+    </div>
+  );
 };
 
-export default TermsConditions;
+export default Terms;

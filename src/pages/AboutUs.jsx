@@ -1,20 +1,58 @@
-import React from 'react';
+import React from "react";
 
 const AboutUs = () => {
-    return (
-        <div>
-            <title>ToyTopia - About</title>
-          <h1 className='text-xl font-bold'>About Us – ToyTopia</h1>
-          <p>Welcome to ToyTopia, your friendly neighborhood toy storage and care service!
-            <br></br>
-            We know how quickly toys can fill up your home — and how hard it can be to let go of your child’s favorite treasures. That’s why we created ToyTopia: a safe, clean, and reliable place to store, organize, and protect your toys for as long as you need.
-            <br></br>
-            At ToyTopia, we believe toys hold memories — not just plastic and paint, but joy, laughter, and love. Our mission is to help families keep those memories safe without the clutter.
-            <br></br>
-            Whether you’re moving, organizing your home, or just need extra space, our team makes it easy and affordable to store your toys with care. We treat every toy as if it were our own — carefully labeled, safely stored, and always ready for pickup whenever you need them back.
-          </p>
-        </div>
-    );
+  return (
+    <div className="max-w-5xl mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold text-center mb-8 text-teal-600">
+        About ToyTopia
+      </h1>
+
+      <p className="text-lg text-gray-700 mb-6">
+        Welcome to <strong>ToyTopia</strong> — your trusted local store of
+        premium toys, creative collectibles, and joyful childhood memories.
+        We are passionate about bringing safe, fun, and imaginative toys to
+        families in our community.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">
+        🎈 Our Mission
+      </h2>
+      <p className="text-gray-700 mb-6">
+        Our mission is simple: to make playtime magical! Whether it's an
+        educational toy or an adorable plushie, we aim to offer handpicked
+        products that nurture creativity and inspire learning.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">
+        🧸 Why Choose ToyTopia?
+      </h2>
+      <ul className="text-gray-700 space-y-3 list-disc pl-6">
+        <li>Wide variety of toys for all ages</li>
+        <li>Locally sourced & trusted toy brands</li>
+        <li>Affordable pricing with premium quality</li>
+        <li>Kid-safe materials you can trust</li>
+        <li>Friendly customer support and community focus</li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">
+        🚀 Our Story
+      </h2>
+      <p className="text-gray-700 mb-6">
+        ToyTopia began as a small local shop built by toy lovers. Over time, we
+        grew into a community-driven marketplace that champions creativity,
+        imagination, and happy childhoods. Today, we are proud to serve
+        families both offline and online with love and dedication.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">
+        💛 Thank You
+      </h2>
+      <p className="text-gray-700">
+        Thank you for choosing ToyTopia. We hope to bring endless joy to your
+        little ones — one toy at a time!
+      </p>
+    </div>
+  );
 };
 
 export default AboutUs;
