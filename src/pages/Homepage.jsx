@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import usetoys from '../hooks/usetoys';
+import { DotLoader } from 'react-spinners';
+import ToysCard from '../components/ToysCard';
 
 const Homepage = () => {
        const slides = [
@@ -14,6 +17,9 @@ const Homepage = () => {
         { id: 4, img: "https://i.ibb.co.com/4w3s1vgY/Screenshot-2025-11-18-222117.png", content: 'Play, Explore, and Imagine at ToyTopia!' },
         { id: 5, img: "https://i.ibb.co.com/YFfdZ0PZ/Screenshot-2025-11-18-222058.png", content: 'Your Adventure in Play Starts Here!'}
     ]
+
+    const{toys,loading} = usetoys()
+    const featuredtoys = toys.slice(0,6)
     return (
           <>
           <MyContainer className='mx-auto container'>
@@ -38,8 +44,21 @@ const Homepage = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-         
-            <h1 className='text-3xl font-bold text-center mt-10'>Welcome to ToyTopia!</h1>
+          <h1 className='text-3xl font-bold text-center text-teal-600 mt-10'>Welcome to ToyTopia!</h1>
+         <h3 className="text-center border-b-2 text-teal-500 font-bold mx-50 my-9 text-xl">Popular toys</h3>
+          <div className='grid my-7 mx-15 md:mx-9 lg:mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3  px-4 md:px-8 lg:px-12 rounded shadow-xl py-9 '>
+
+                   {
+    loading ?<DotLoader />
+     : 
+     (
+        featuredtoys.map(toy => (
+            <ToysCard key={toy.id} toy= {toy} />
+        )
+        )
+    )
+ }
+            </div>
            </MyContainer>
         
         </>

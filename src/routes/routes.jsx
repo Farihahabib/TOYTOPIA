@@ -12,6 +12,7 @@ import Register from "../components/Register";
 
 import Fpassword from "../components/Fpassword";
 import Privateroute from "../PrivateRoute/Privateroute";
+import ToyDetails from "../pages/ToyDetails";
 
 
 export const router = createBrowserRouter([
@@ -62,6 +63,15 @@ export const router = createBrowserRouter([
             {
                 path : "/Fpassword",
                 element: <Fpassword />
+            },
+            {
+             
+                path : "/ToyDetails/:id",
+                element:
+                  ( <Privateroute>
+                    <ToyDetails/>
+                </Privateroute>
+            )
             },
          
         ]
