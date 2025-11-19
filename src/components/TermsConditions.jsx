@@ -2,6 +2,8 @@ import React from "react";
 
 const Terms = () => {
   return (
+    <>
+    <title>Terms&Conditions</title>
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center text-teal-600 mb-10">
         Terms & Conditions – ToyTopia
@@ -99,6 +101,7 @@ const Terms = () => {
         us at: support@toytopia.com
       </p>
     </div>
+    </>
   );
 };
 

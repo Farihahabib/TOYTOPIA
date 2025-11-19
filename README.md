@@ -66,3 +66,22 @@ Frontend
 🔄 React Spinners
 
 ⚡ Vite
+
+
+📦 NPM Packages Used
+
+Here are the main npm packages used in this project:
+
+React – For building the user interface
+
+React Router DOM – For SPA routing and navigation
+
+Firebase – For authentication and user profile updates
+
+Axios /  – For API requests (only if you’re using it)
+
+Tailwind CSS / DaisyUI – For styling and components
+
+ React Hot Toast – For alert and toast notifications
+
+React Icons – For using icons easily

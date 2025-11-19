@@ -99,7 +99,7 @@ console.log(emailRef.current.value)
 }
     return (
         <>
-            <title>ToyTopia - Login</title>
+            <title>Login</title>
         <MyContainer>
         <div className='flex  items-center justify-center container mx-auto py-12'>
       

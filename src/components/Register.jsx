@@ -73,7 +73,7 @@ toast.success(" Successfully Registered with Google")
     
     return (
         <>
-            <title>ToyTopia - Registration</title>
+            <title>Registration</title>
                 <MyContainer>
         <div className='flex  items-center justify-center container mx-auto py-12'>
       

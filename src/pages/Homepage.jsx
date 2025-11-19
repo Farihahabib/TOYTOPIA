@@ -24,7 +24,7 @@ const Homepage = () => {
     return (
           <>
           <MyContainer className='mx-auto container'>
-           <title>ToyTopia - Home</title>
+           <title>ToyTopia-Home</title>
              <Swiper
                         modules={[Navigation, Pagination]}
                         navigation

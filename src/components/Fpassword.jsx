@@ -46,7 +46,7 @@ sendPasswordResetEmailFunc( email).then((res)=>{
     return (
         <div>
                
-             <title>ToyTopia - Forgot Password</title>
+             <title>FPassword</title>
              <div className='flex p-4 flex-col my-4 w-1/3 mx-auto mt-5 bg-teal-400 rounded-xl '>
                  <label className='font-semibold' >email</label>
                  <input

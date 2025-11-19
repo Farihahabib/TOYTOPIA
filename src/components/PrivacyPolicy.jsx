@@ -2,6 +2,8 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
+    <>
+    <title>Privacy&Policy</title>
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center text-teal-600 mb-10">
         Privacy Policy – ToyTopia
@@ -100,6 +102,7 @@ const PrivacyPolicy = () => {
         <strong>support@toytopia.com</strong>
       </p>
     </div>
+    </>
   );
 };
 

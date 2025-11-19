@@ -24,6 +24,7 @@ const { pictureURL, toyName,sellerName,sellerEmail,price,rating,availableQuantit
     return (
        <>
        <MyContainer className='shadow-xl m-10 rounded-xl'>
+        <title>Toy Details</title>
          <div className="container  flex justify-center items-center p-5">
          <img src={pictureURL} alt="" />
          </div>

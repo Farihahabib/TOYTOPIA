@@ -2,6 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
+    <>
+  <title>ContactUs</title>
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center text-teal-600 mb-10">
         Contact ToyTopia
@@ -71,6 +73,7 @@ const Contact = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

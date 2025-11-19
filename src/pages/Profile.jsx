@@ -9,7 +9,7 @@ const Profile = () => {
        const [name, setName] = useState(user?.displayName || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const [isOpen, setIsOpen] = useState(false);
-  const [error, setError] = useState("");
+  const [ setError] = useState("");
 
   const handlesubmit =async (e)=>{
 e.preventDefault()
@@ -27,7 +27,7 @@ catch(e){
   }
     return (
       <>
-        <title>ToyTopia - My Profile</title>
+        <title> My Profile</title>
        <MyContainer>
        <div className="box m-9 flex flex-col items-center justify-center">
         <div className="img ">

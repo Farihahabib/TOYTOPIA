@@ -2,6 +2,8 @@ import React from "react";
 
 const AboutUs = () => {
   return (
+    <>
+    <title>About Us</title>
     <div className="max-w-5xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center mb-8 text-teal-600">
         About ToyTopia
@@ -52,6 +54,7 @@ const AboutUs = () => {
         little ones — one toy at a time!
       </p>
     </div>
+    </>
   );
 };
 
