@@ -9,7 +9,7 @@ const Profile = () => {
        const [name, setName] = useState(user?.displayName || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const [isOpen, setIsOpen] = useState(false);
-  const [ setError] = useState("");
+  const [error, setError] = useState("");
 
   const handlesubmit =async (e)=>{
 e.preventDefault()
