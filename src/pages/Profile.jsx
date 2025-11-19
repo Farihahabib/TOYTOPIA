@@ -31,7 +31,7 @@ catch(e){
        <MyContainer>
        <div className="box m-9 flex flex-col items-center justify-center">
         <div className="img ">
-            <img src={user?.photoURL|| "https://via.placeholder.com/88"} alt="" className='rounded-full' />
+            <img src={user?.photoURL|| "https://via.placeholder.com/88"} alt="" className='rounded-full w-50 h-50' />
         </div>
         <div className="info">
             <p className="name text-center font-semibold text-lg"> {user?.displayName || "Anonymous User"}</p>
