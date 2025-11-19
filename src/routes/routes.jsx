@@ -14,6 +14,7 @@ import Fpassword from "../components/Fpassword";
 import Privateroute from "../PrivateRoute/Privateroute";
 import ToyDetails from "../pages/ToyDetails";
 import AllToys from "../pages/AllToys";
+import Error from "../components/Error";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
         path : "/",
         element:
         <MainLayouts />,
+         errorElement: <Error />,
         children:[
             {
                 index:true,

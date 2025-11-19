@@ -39,7 +39,7 @@ console.log(loading);
             <MyLink to={"/"}>Home</MyLink>
           </li>
         {user &&  (<li>
-            <MyLink to={"/profile"}>Profile</MyLink>
+            <MyLink to={"/profile"}>My Profile</MyLink>
            </li>
           )}
         {user &&  (<li>
