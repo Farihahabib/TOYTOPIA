@@ -1,15 +1,16 @@
 [
   {
     "toyId": 1,
-    "toyName": "Lego Classic Bricks",
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "rating": 4.7,
-    "availableQuantity": 75,
-    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine.",
-    "pictureURL": "https://i.ibb.co.com/hxG6S2v7/Screenshot-2025-11-19-002106.png",
-    "subCategory": "Building Blocks"
+     "toyName": "Glow-in-the-Dark Jump Rope",
+    "sellerName": "Active Kids",
+    "sellerEmail": "contact@activekids.com",
+    "price": 9.99,
+    "rating": 4.2,
+    "availableQuantity": 110,
+    "description": "A fun jump rope with glow-in-the-dark handles for nighttime play.",
+    "pictureURL": "https://i.ibb.co.com/spbpzq0W/Screenshot-2025-11-19-155037.png",
+    "subCategory": "Outdoor Toys"
+   
   },
   {
     "toyId": 2,
@@ -25,15 +26,16 @@
   },
   {
     "toyId": 3,
-    "toyName": "Barbie Fashion Doll",
-    "sellerName": "Dream Doll Shop",
-    "sellerEmail": "sales@dreamdoll.com",
-    "price": 25.5,
-    "rating": 4.4,
-    "availableQuantity": 55,
-    "description": "A stylish Barbie doll with modern fashion accessories, perfect for kids who love imaginative storytelling.",
-    "pictureURL": "https://i.ibb.co.com/4gwK5F02/Screenshot-2025-11-19-002540.png",
-    "subCategory": "Dolls"
+        "toyName": "Doctor Play Set",
+    "sellerName": "MiniMedic Toys",
+    "sellerEmail": "support@minimedic.com",
+    "price": 24.49,
+    "rating": 4.6,
+    "availableQuantity": 60,
+    "description": "A complete doctor role-play set including stethoscope, thermometer, and medical tools.",
+    "pictureURL": "https://i.ibb.co.com/67dYM2j9/Screenshot-2025-11-19-154934.png",
+    "subCategory": "Role Play"
+   
   },
   {
     "toyId": 4,
@@ -49,19 +51,34 @@
   },
   {
     "toyId": 5,
-    "toyName": "Stuffed Teddy Bear",
-    "sellerName": "Cuddle Corner",
-    "sellerEmail": "info@cuddlecorner.com",
-    "price": 18.99,
-    "rating": 4.8,
-    "availableQuantity": 100,
-    "description": "A soft, cuddly teddy bear that brings comfort and joy to kids of all ages.",
-    "pictureURL": "https://i.ibb.co.com/HLHLmDC9/Screenshot-2025-11-19-002841.png",
-    "subCategory": "Stuffed Animals"
+        "toyName": "Princess Castle Tent",
+    "sellerName": "MagicPlay",
+    "sellerEmail": "info@magicplay.com",
+    "price": 44.99,
+    "rating": 4.5,
+    "availableQuantity": 20,
+    "description": "A pink castle-style play tent perfect for indoor imaginative play.",
+    "pictureURL": "https://i.ibb.co.com/BVjtkZHv/Screenshot-2025-11-19-153957.png",
+    "subCategory": "Indoor Play"
+   
   },
   {
     "toyId": 6,
-    "toyName": "Dinosaur Action Figures Set",
+        "toyName": "Kids Play Kitchen Set",
+    "sellerName": "MiniChef Toys",
+    "sellerEmail": "support@minichef.com",
+    "price": 52.0,
+    "rating": 4.6,
+    "availableQuantity": 25,
+    "description": "A mini kitchen set with utensils and toy food items that encourage role play.",
+    "pictureURL": "https://i.ibb.co.com/whj2X48F/Screenshot-2025-11-19-153417.png",
+    "subCategory": "Role Play"
+
+   
+  },
+  {
+    "toyId": 7,
+     "toyName": "Dinosaur Action Figures Set",
     "sellerName": "Jungle Toys",
     "sellerEmail": "hello@junglethetoys.com",
     "price": 27.49,
@@ -72,18 +89,6 @@
     "subCategory": "Action Figures"
   },
   {
-    "toyId": 7,
-    "toyName": "Kids Play Kitchen Set",
-    "sellerName": "MiniChef Toys",
-    "sellerEmail": "support@minichef.com",
-    "price": 52.0,
-    "rating": 4.6,
-    "availableQuantity": 25,
-    "description": "A mini kitchen set with utensils and toy food items that encourage role play.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/11/19/12/54/kitchen-1835365_1280.jpg",
-    "subCategory": "Role Play"
-  },
-  {
     "toyId": 8,
     "toyName": "Puzzle World Map",
     "sellerName": "BrainBoost Store",
@@ -92,7 +97,7 @@
     "rating": 4.6,
     "availableQuantity": 45,
     "description": "A 100-piece world map puzzle that educates children about geography.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/01/12/21/56/puzzle-1971218_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/HL6bpjtq/Screenshot-2025-11-19-153628.png",
     "subCategory": "Puzzles"
   },
   {
@@ -104,7 +109,7 @@
     "rating": 4.3,
     "availableQuantity": 38,
     "description": "A colorful musical drum set that helps kids develop rhythm and sound skills.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/11/29/12/54/drum-1867081_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/Z6hsBvST/Screenshot-2025-11-19-153744.png",
     "subCategory": "Musical Toys"
   },
   {
@@ -116,20 +121,20 @@
     "rating": 4.9,
     "availableQuantity": 150,
     "description": "A cute yellow rubber duck that floats and makes bath time enjoyable.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2013/07/12/13/58/rubber-duck-147347_1280.png",
+    "pictureURL": "https://i.ibb.co.com/3yvcHm7p/Screenshot-2025-11-19-153852.png",
     "subCategory": "Bath Toys"
   },
   {
     "toyId": 11,
-    "toyName": "Princess Castle Tent",
-    "sellerName": "MagicPlay",
-    "sellerEmail": "info@magicplay.com",
-    "price": 44.99,
-    "rating": 4.5,
-    "availableQuantity": 20,
-    "description": "A pink castle-style play tent perfect for indoor imaginative play.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/07/11/17/21/castle-2498490_1280.jpg",
-    "subCategory": "Indoor Play"
+      "toyName": "Stuffed Teddy Bear",
+    "sellerName": "Cuddle Corner",
+    "sellerEmail": "info@cuddlecorner.com",
+    "price": 18.99,
+    "rating": 4.8,
+    "availableQuantity": 100,
+    "description": "A soft, cuddly teddy bear that brings comfort and joy to kids of all ages.",
+    "pictureURL": "https://i.ibb.co.com/HLHLmDC9/Screenshot-2025-11-19-002841.png",
+    "subCategory": "Stuffed Animals"
   },
   {
     "toyId": 12,
@@ -140,7 +145,7 @@
     "rating": 4.4,
     "availableQuantity": 28,
     "description": "An interactive robot toy that talks, lights up, and responds to commands.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/31/19/58/robot-1297491_1280.png",
+    "pictureURL": "https://i.ibb.co.com/zHJ0WQVC/Screenshot-2025-11-19-154107.png",
     "subCategory": "Electronic Toys"
   },
   {
@@ -152,7 +157,7 @@
     "rating": 4.8,
     "availableQuantity": 200,
     "description": "A fun coloring book with more than 60 pages of cartoon characters.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/12/06/18/27/coloring-1889885_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/YC6SS3b/Screenshot-2025-11-19-154228.png",
     "subCategory": "Books"
   },
   {
@@ -164,7 +169,7 @@
     "rating": 4.4,
     "availableQuantity": 90,
     "description": "A classic 3x3 cube puzzle that boosts concentration and logical thinking.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/08/10/01/23/rubiks-cube-2619340_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/1YQ0nb9X/Screenshot-2025-11-19-154332.png",
     "subCategory": "Puzzles"
   },
   {
@@ -176,7 +181,7 @@
     "rating": 4.6,
     "availableQuantity": 50,
     "description": "A poseable superhero action figure with detachable accessories.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/27/20/55/hulk-1285135_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/MqXrnvL/Screenshot-2025-11-19-154446.png",
     "subCategory": "Action Figures"
   },
   {
@@ -188,7 +193,7 @@
     "rating": 4.5,
     "availableQuantity": 70,
     "description": "A lightweight and durable football perfect for kids' outdoor games.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/27/20/12/football-1285054_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/N6M7G2wk/Screenshot-2025-11-19-154553.png",
     "subCategory": "Outdoor Toys"
   },
   {
@@ -200,7 +205,7 @@
     "rating": 4.6,
     "availableQuantity": 80,
     "description": "A safe, non-toxic finger paint kit with multiple vibrant colors.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/02/02/09/31/paint-2036922_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/S4D6X5YL/Screenshot-2025-11-19-154651.png",
     "subCategory": "Art & Craft"
   },
   {
@@ -212,31 +217,31 @@
     "rating": 4.7,
     "availableQuantity": 18,
     "description": "A sturdy kids scooter with adjustable height and safety brakes.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/08/06/14/43/children-2597926_1280.jpg",
+    "pictureURL": "https://i.ibb.co.com/21G8gRgv/Screenshot-2025-11-19-154819.png",
     "subCategory": "Outdoor Toys"
   },
   {
     "toyId": 19,
-    "toyName": "Doctor Play Set",
-    "sellerName": "MiniMedic Toys",
-    "sellerEmail": "support@minimedic.com",
-    "price": 24.49,
-    "rating": 4.6,
-    "availableQuantity": 60,
-    "description": "A complete doctor role-play set including stethoscope, thermometer, and medical tools.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2017/01/10/23/01/doctor-1970616_1280.jpg",
-    "subCategory": "Role Play"
+      "toyName": "Barbie Fashion Doll",
+    "sellerName": "Dream Doll Shop",
+    "sellerEmail": "sales@dreamdoll.com",
+    "price": 25.5,
+    "rating": 4.4,
+    "availableQuantity": 55,
+    "description": "A stylish Barbie doll with modern fashion accessories, perfect for kids who love imaginative storytelling.",
+    "pictureURL": "https://i.ibb.co.com/4gwK5F02/Screenshot-2025-11-19-002540.png",
+    "subCategory": "Dolls"
   },
   {
     "toyId": 20,
-    "toyName": "Glow-in-the-Dark Jump Rope",
-    "sellerName": "Active Kids",
-    "sellerEmail": "contact@activekids.com",
-    "price": 9.99,
-    "rating": 4.2,
-    "availableQuantity": 110,
-    "description": "A fun jump rope with glow-in-the-dark handles for nighttime play.",
-    "pictureURL": "https://cdn.pixabay.com/photo/2014/04/02/10/56/jump-rope-303729_1280.png",
-    "subCategory": "Outdoor Toys"
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine.",
+    "pictureURL": "https://i.ibb.co.com/hxG6S2v7/Screenshot-2025-11-19-002106.png",
+    "subCategory": "Building Blocks"
   }
 ]

@@ -40,7 +40,13 @@ console.log(loading);
           </li>
         {user &&  (<li>
             <MyLink to={"/profile"}>Profile</MyLink>
-           </li>)}
+           </li>
+          )}
+        {user &&  (<li>
+            <MyLink to={"/AllToys"}>AllToys</MyLink>
+           </li>
+          )}
+       
          </ul>
          {loading ?
          (<DotLoader  />) :

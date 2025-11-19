@@ -10,11 +10,12 @@ const googleProvider = new GoogleAuthProvider();
         setLoading(true);
         return createUserWithEmailAndPassword(auth , email, password);
     }
-    const updateprofileFunc = (displayName, photoURL)=>{
+    const updateprofileFunc = (displayName, photoURL,email)=>{
   
         return updateProfile (auth.currentUser, {
             displayName,
             photoURL,
+            email
         });
     }
     const signInWithEmailAndPasswordFunc = (email,password)=>{

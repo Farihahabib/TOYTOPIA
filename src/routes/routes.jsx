@@ -13,6 +13,7 @@ import Register from "../components/Register";
 import Fpassword from "../components/Fpassword";
 import Privateroute from "../PrivateRoute/Privateroute";
 import ToyDetails from "../pages/ToyDetails";
+import AllToys from "../pages/AllToys";
 
 
 export const router = createBrowserRouter([
@@ -70,6 +71,15 @@ export const router = createBrowserRouter([
                 element:
                   ( <Privateroute>
                     <ToyDetails/>
+                </Privateroute>
+            )
+            },
+            {
+             
+                path : "/AllToys",
+                element:
+                  ( <Privateroute>
+                    <AllToys/>
                 </Privateroute>
             )
             },

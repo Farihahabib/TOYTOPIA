@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import usetoys from '../hooks/usetoys';
 import { DotLoader } from 'react-spinners';
 import ToysCard from '../components/ToysCard';
+import MyLink from '../components/MyLink';
 
 const Homepage = () => {
        const slides = [
@@ -59,6 +60,7 @@ const Homepage = () => {
     )
  }
             </div>
+            <MyLink to={'/AllToys'} className="btn flex justify-center items-center my-9 bg-none"><button className='w-2/12 bg-teal-500 text-white hover:bg-teal-700 rounded py-2 my-9'>Show all toys</button></MyLink>
            </MyContainer>
         
         </>

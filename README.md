@@ -6,9 +6,9 @@ Designed with React, Tailwind, and React Router, it focuses on providing a smoot
 
 🌍 Live Demo
 
-🔗 Live Website: # [Toytopia1 ] (https://toytopia1.netlify.app/)
+🔗 Live Website: # [Toytopia1 ] (https://toytopia2.netlify.app/)
 🔗 Client Repository: Optional
-🔗 Server Repository: Optional
+
 
 🎯 Project Purpose
 
@@ -29,9 +29,6 @@ View all toys with image, price, rating, and quantity.
 
 Each toy card includes a View Details button.
 
-🔍 Search & Filter
-
-Instant toy search using local state.
 
 📄 Dynamic Toy Details Page
 
